@@ -45,3 +45,14 @@ const palettes = require('nice-color-palettes');
 - sketch.js (basics)
 - sketch2.js (grid and randomness)
 - sketch3color.js (random colors)
+- sketch4noise.js
+- sketch5text.js
+
+### Noise function
+```
+v = noise2D(x,y)
+v = noise3D(x,y,z)
+v = noise4D(x,y,z,w)
+```
+
+Takes in a coordinate value, returns a value between -1 and 1. 
