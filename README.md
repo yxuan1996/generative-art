@@ -2,6 +2,8 @@
 
 https://github.com/mattdesl/workshop-generative-art
 
+Cheatsheet: https://github.com/mattdesl/workshop-generative-art/blob/master/docs/cheat-sheet.md
+
 ### Installation and Usage
 
 Install canvas sketch
@@ -30,3 +32,16 @@ Additional libraries
 ```
 npm install canvas-sketch-util
 ```
+
+Color Palettes
+```
+npm install nice-color-palettes
+```
+```
+const palettes = require('nice-color-palettes');
+```
+
+### Files
+- sketch.js (basics)
+- sketch2.js (grid and randomness)
+- sketch3color.js (random colors)
