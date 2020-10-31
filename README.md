@@ -41,19 +41,6 @@ npm install nice-color-palettes
 const palettes = require('nice-color-palettes');
 ```
 
-To create a new 3D sketch, we can specify the template
-```
-canvas-sketch webgl.js --new --template=three
-```
-
-We can use the eases library for fast and slow transitions
-```
-npm install eases
-```
-```
-const eases = require('eases');
-```
-
 ### Export
 Export a gif/animation
 - First we need to define the fps and duration in settings.
@@ -86,6 +73,19 @@ Takes in a coordinate value, returns a value between -1 and 1.
 ### 3D 
 We use the ThreeJS library to render basic 3D shapes
 
+To create a new 3D sketch, we can specify the template
+```
+canvas-sketch webgl.js --new --template=three
+```
+
+We can use the eases library for fast and slow transitions
+```
+npm install eases
+```
+```
+const eases = require('eases');
+```
+
 ##### Material
 We draw a basic shape suing `MeshBasicMaterial`
 
@@ -95,3 +95,23 @@ Another cool material to use is `MeshNormalMaterial`
 
 To take into account shading, shadows and light, use `MeshStandardMaterial`
 
+### Shaders
+To create a new shader
+```
+canvas-sketch shader.js --new --template=shader
+```
+
+RGBA color shader
+```
+gl_FragColor = vec4(1.0,1.0,1.0,1.0);
+```
+
+RGB color shader
+```
+vec3 colorA = vec3(1.0,0.0,0.0);
+```
+
+Mixing different colors
+```
+vec3 color= mix(colorA,colorB, vUv.x);
+```
