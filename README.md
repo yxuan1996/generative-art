@@ -46,13 +46,33 @@ To create a new 3D sketch, we can specify the template
 canvas-sketch webgl.js --new --template=three
 ```
 
-### Files
-- sketch.js (basics)
-- sketch2.js (grid and randomness)
-- sketch3color.js (random colors)
-- sketch4noise.js
-- sketch5text.js
-- webgl.js
+We can use the eases library for fast and slow transitions
+```
+npm install eases
+```
+```
+const eases = require('eases');
+```
+
+### Export
+Export a gif/animation
+- First we need to define the fps and duration in settings.
+- In the return render function, we change the variable to `playhead` instead of `time`
+- we set the output folder (usually relative to desktop or downloads)
+```
+canvas-sketch webgl-seamless.js --output=tmp/
+```
+- While the animation is running in the web browser, Ctrt + shift + s (This will export each individual frame as a png image)
+
+After that we use this tool called giftool (https://giftool.surge.sh) 
+- This tool allows us to drop a folder of images and it will create a gif for us. 
+
+Export a mp4 file (requires ffmpeg to be installed)
+```
+canvas-sketch-mp4 tmp/
+```
+
+For more info about exports and conversions, read this: https://github.com/mattdesl/canvas-sketch/blob/master/docs/cli.md
 
 ### Noise function
 ```
