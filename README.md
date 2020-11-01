@@ -115,3 +115,24 @@ Mixing different colors
 ```
 vec3 color= mix(colorA,colorB, vUv.x);
 ```
+
+Installing the noise module
+```
+npm install glsl-noise
+```
+
+Using the noise module: include this line before the void main() function
+```
+#pragma glslify: noise = require('glsl-noise/simplex/3d');
+```
+
+Installing the color shader module
+```
+npm install glsl-hsl2rgb
+```
+
+Using the color shader module: include this line before the void main() function
+```
+#pragma glslify: hsl2rgb = require('glsl-hsl2rgb');
+```
+
