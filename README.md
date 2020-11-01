@@ -4,6 +4,8 @@ https://github.com/mattdesl/workshop-generative-art
 
 Cheatsheet: https://github.com/mattdesl/workshop-generative-art/blob/master/docs/cheat-sheet.md
 
+Cool Triangle transitions for icons: http://mattdesl.github.io/svg-mesh-3d/
+
 ### Installation and Usage
 
 Install canvas sketch
@@ -39,6 +41,12 @@ npm install nice-color-palettes
 ```
 ```
 const palettes = require('nice-color-palettes');
+```
+
+Penplotter
+- Generates art for a penplotter/laser cutter/cnc machine
+```
+canvas-sketch penplotter.js --new --template=penplotter
 ```
 
 ### Export
